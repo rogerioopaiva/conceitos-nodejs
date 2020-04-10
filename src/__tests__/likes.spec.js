@@ -7,7 +7,7 @@ describe("Likes", () => {
       .post("/repositories")
       .send({
         url: "https://github.com/Rocketseat/umbriel",
-        title: "Umbriel",
+        title: "Desafio Node.js",
         techs: ["Node", "Express", "TypeScript"]
       });
 

@@ -7,17 +7,17 @@ describe("Projects", () => {
     const response = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
-        title: "Umbriel",
-        techs: ["Node", "Express", "TypeScript"]
+        url: "https://github.com/Rocketseat/Desafio Node.js",
+        title: "Desafio Node.js",
+        techs: ["Node", "Express", "Angular"]
       });
 
     expect(isUuid(response.body.id)).toBe(true);
 
     expect(response.body).toMatchObject({
-      url: "https://github.com/Rocketseat/umbriel",
-      title: "Umbriel",
-      techs: ["Node", "Express", "TypeScript"],
+      url: "https://github.com/Rocketseat/Desafio Node.js",
+      title: "Desafio Node.js",
+      techs: ["Node", "Express", "Angular"],
       likes: 0
     });
   });
@@ -26,9 +26,9 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
-        title: "Umbriel",
-        techs: ["Node", "Express", "TypeScript"]
+        url: "https://github.com/Rocketseat/Desafio Node.js",
+        title: "Desafio Node.js",
+        techs: ["Node", "Express", "Angular"]
       });
 
     const response = await request(app).get("/repositories");
@@ -37,9 +37,9 @@ describe("Projects", () => {
       expect.arrayContaining([
         {
           id: repository.body.id,
-          url: "https://github.com/Rocketseat/umbriel",
-          title: "Umbriel",
-          techs: ["Node", "Express", "TypeScript"],
+          url: "https://github.com/Rocketseat/Desafio Node.js",
+          title: "Desafio Node.js",
+          techs: ["Node", "Express", "Angular"],
           likes: 0
         }
       ])
@@ -50,9 +50,9 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
-        title: "Umbriel",
-        techs: ["Node", "Express", "TypeScript"]
+        url: "https://github.com/Rocketseat/Desafio Node.js",
+        title: "Desafio Node.js",
+        techs: ["Node", "Express", "Angular", "VUEJs"]
       });
 
     const response = await request(app)
@@ -82,8 +82,8 @@ describe("Projects", () => {
     const repository = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
-        title: "Umbriel",
+        url: "https://github.com/Rocketseat/Desafio Node.js",
+        title: "Desafio Node.js",
         techs: ["React", "ReactNative", "TypeScript", "ContextApi"]
       });
 
@@ -102,8 +102,8 @@ describe("Projects", () => {
     const response = await request(app)
       .post("/repositories")
       .send({
-        url: "https://github.com/Rocketseat/umbriel",
-        title: "Umbriel",
+        url: "https://github.com/Rocketseat/Desafio Node.js",
+        title: "Desafio Node.js",
         techs: ["Node", "Express", "TypeScript"]
       });
 
